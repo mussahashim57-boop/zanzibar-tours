@@ -26,7 +26,8 @@ img{display:block;max-width:100%}
 .hero p{font-size:clamp(16px,2.2vw,19px);max-width:560px;opacity:.92}
 .cta{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#063b1b;font-weight:600;padding:14px 22px;border-radius:999px;text-decoration:none;margin-top:26px}
 .cta svg{width:20px;height:20px}
-.ghost{color:#fff;margin-left:18px;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
+.links{display:inline-flex;flex-wrap:wrap;gap:12px 22px;margin-left:18px;vertical-align:middle;margin-top:26px}
+.ghost{color:#fff;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
 .brand{position:absolute;top:22px;left:0;right:0;z-index:2}
 .brand .wrap{display:flex;justify-content:space-between;align-items:center}
 .brand b{font-family:Fraunces,serif;font-size:20px;color:#fff;line-height:1.15;max-width:60%;text-shadow:0 1px 10px rgba(0,0,0,.4)}
@@ -103,7 +104,7 @@ footer a{color:inherit}
   .guide{grid-template-columns:1fr;gap:24px;padding:48px 16px}
   .guide .pic{max-width:300px}
   .grid{grid-template-columns:1fr}
-  .ghost{display:none}
+  .links{display:flex;margin-left:0;margin-top:18px}
   .hero{min-height:82vh}
 }
 </style>
@@ -121,7 +122,7 @@ footer a{color:inherit}
     <h1 class="serif" id="headline"></h1>
     <p id="intro"></p>
     <a class="cta" id="ctaHero" target="_blank" rel="noopener"><svg fill="currentColor"><use href="#wa"/></svg>Chat on WhatsApp</a>
-    <a class="ghost" href="#tours">See all excursions ↓</a>
+    <div class="links"><a class="ghost" href="#tours">See all excursions ↓</a><a class="ghost" href="#reviews">What my guests say ↓</a></div>
   </div>
 </section>
 
