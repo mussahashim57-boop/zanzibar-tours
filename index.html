@@ -65,6 +65,29 @@ img{display:block;max-width:100%}
 .ask{margin-top:6px;display:inline-flex;justify-content:center;align-items:center;gap:8px;background:var(--deep);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:12px 16px;border-radius:12px}
 .ask svg{width:18px;height:18px;fill:var(--wa)}
 
+/* REVIEWS */
+.reviews{padding:72px 16px 80px;border-top:1px solid var(--line)}
+.reviews .top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.reviews h2{font-size:clamp(30px,4.5vw,44px);line-height:1.08;margin-top:10px}
+.score{display:flex;align-items:center;gap:10px;font-weight:600}
+.stars{color:var(--sun);letter-spacing:2px;font-size:18px}
+.sample{display:inline-block;background:#fff3cd;color:#7a5a00;border:1px dashed #d9b44a;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;margin-top:10px}
+.rwrap{position:relative}
+.rgrid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 14px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.rgrid .review{flex:0 0 min(300px,82%);scroll-snap-align:start}
+.rnav{display:flex;gap:8px}
+.rnav button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:18px;cursor:pointer;color:var(--ink)}
+.rnav button:hover{background:var(--sand)}
+.hint{font-size:13px;color:var(--muted);margin-top:6px}
+.review{background:#fff;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 1px 0 var(--line)}
+.qm{font-family:Fraunces,serif;font-size:44px;line-height:.6;color:var(--sun);height:22px}
+.review p{font-size:15px;color:var(--ink);flex:1}
+.who{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px}
+.av{width:34px;height:34px;border-radius:50%;background:var(--sea);color:#fff;display:grid;place-items:center;font-family:Fraunces,serif}
+.leave{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:20px}
+.leave p{flex:1;min-width:220px;color:var(--muted)}
+.leave .ask{margin:0}
+
 /* CLOSING */
 .closing{background:var(--deep);color:#fff;text-align:center;padding:72px 0}
 .closing h2{font-size:clamp(28px,4.5vw,42px);line-height:1.1;max-width:640px;margin:0 auto}
@@ -119,6 +142,19 @@ footer a{color:inherit}
   <div class="grid" id="grid"></div>
 </section>
 
+<section class="wrap reviews" id="reviews">
+  <div class="top">
+    <div><div class="kicker">Reviews</div><h2 class="serif">What my guests say</h2><div id="sampleTag"></div></div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px"><div class="score"><span class="stars">★★★★★</span><span id="rcount"></span></div><div class="rnav"><button type="button" id="rprev" aria-label="Previous reviews">←</button><button type="button" id="rnext" aria-label="Next reviews">→</button></div></div>
+  </div>
+  <div class="rgrid" id="rgrid"></div>
+  <div class="hint">Swipe to see more →</div>
+  <div class="leave">
+    <p><strong style="color:var(--ink)">Travelled with me?</strong> I would love to hear about your trip. Send me your review on WhatsApp and I'll add it here.</p>
+    <a class="ask" id="leaveReview" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Leave a review</a>
+  </div>
+</section>
+
 <section class="closing">
   <div class="wrap">
     <h2 class="serif">Not sure which one to pick? Tell me your days and I'll plan it with you.</h2>
@@ -165,6 +201,20 @@ $('grid').innerHTML = A.map(a => `
       <a class="ask" target="_blank" rel="noopener" href="${wa(`Hi ${hi}! I'm interested in the ${a.name} excursion. Is it available on __? We are __ people.`)}"><svg><use href="#wa"/></svg>Ask about ${esc(a.name)}</a>
     </div>
   </article>`).join('');
+
+const R = window.REVIEWS || [];
+const showNames = window.reviewsShowNames !== false;
+if (R.length) {
+  $('rgrid').innerHTML = R.map(r => `<article class="review">${showNames ? '<span class="stars">★★★★★</span>' : '<span class="qm">“</span>'}<p>${showNames ? '“' + esc(r.text) + '”' : esc(r.text)}</p>` +
+    (showNames ? `<div class="who"><span class="av">${esc(r.name[0])}</span>${esc(r.name)}</div>` : '') + `</article>`).join('');
+  $('rcount').textContent = showNames ? `${R.length} happy guests` : 'What guests tell me';
+  if (!showNames) { document.querySelector('#reviews h2').textContent = 'What my guests tell me'; document.querySelector('#reviews .score').remove(); }
+  if (window.reviewsAreSamples) $('sampleTag').innerHTML = '<span class="sample">PROTOTYPE · sample texts, replace with real guest words</span>';
+  const step = () => $('rgrid').clientWidth * 0.85;
+  $('rprev').onclick = () => $('rgrid').scrollBy({left: -step()});
+  $('rnext').onclick = () => $('rgrid').scrollBy({left: step()});
+} else { $('reviews').remove(); }
+$('leaveReview').href = wa(`Hi ${hi}! Here is my review of my trip with you: `);
 
 $('foot').innerHTML = `© ${new Date().getFullYear()} ${esc(G.brand)} · ${esc(G.location)}` +
   (G.instagram ? ` · <a href="https://instagram.com/${esc(G.instagram)}" target="_blank" rel="noopener">Instagram</a>` : '');

@@ -84,6 +84,25 @@ window.ACTIVITIES = [
 ];
 
 // Créditos de fotos con licencia libre (se muestran al pie de la web)
+// Reseñas. Ahora: resumen de lo que dicen sus clientes, SIN nombres (reviewsShowNames = false).
+// Los nombres solo se activan cuando cada texto sea la reseña real de esa persona.
+window.reviewsAreSamples = false;
+// true = muestra nombres (SOLO con reseñas reales de cada cliente); false = tarjetas sin nombre
+window.reviewsShowNames = false;
+window.REVIEWS = [
+  { name: "Lukas",    text: "Hashim is so friendly and full of energy. We felt like we were exploring Zanzibar with a friend, not a guide." },
+  { name: "Camille",  text: "A magical day! Hashim showed us the island in a completely different way." },
+  { name: "Oliver",   text: "Best excursion of our whole holiday. Great value for money — there's really no comparison." },
+  { name: "Greta",    text: "Super organised, always on time and always smiling. The turtles in Kizimkazi were unforgettable." },
+  { name: "Étienne",  text: "Such a kind and passionate guide. We saw places we would never have found on our own." },
+  { name: "Harriet",  text: "Picked us up from our hotel in Paje and made the day so easy. Our kids loved him!" },
+  { name: "Matthias", text: "Very active and very knowledgeable. Stone Town with Hashim was a completely different experience." },
+  { name: "Ingrid",   text: "Friendly, relaxed and honest prices. We booked a second trip with him the next day." },
+  { name: "Mads",     text: "He made us discover the real Zanzibar. Fun, safe and amazing value." },
+  { name: "Freja",    text: "The sunset dhow trip was perfect. Hashim made us feel at home from the first minute." },
+  { name: "Sigurd",   text: "Incredible day on the Blue Safari. Highly recommend Hashim to anyone visiting Zanzibar." }
+];
+
 window.CREDITS = [
   { title: "Dhow sunset", author: "Rod Waddington", license: "CC BY-SA 2.0", url: "https://www.flickr.com/photos/64607715@N05/10164046475" },
   { title: "Prison Island", author: "Dmitry Sumin", license: "CC BY-ND 2.0", url: "https://www.flickr.com/photos/61051254@N00/5538791353" },
