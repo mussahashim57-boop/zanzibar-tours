@@ -56,7 +56,7 @@ img{display:block;max-width:100%}
 .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--sea)}
 .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .card:hover .ph img{transform:scale(1.04)}
-.ph .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s ease}
+.ph .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
 .ph .slide.on{opacity:1}
 .dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:6px;z-index:1}
 .dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.55)}
@@ -219,7 +219,7 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
       s[i].classList.remove('on'); d[i].classList.remove('on');
       i = (i + 1) % s.length;
       s[i].classList.add('on'); d[i].classList.add('on');
-    }, 1000), k * 150);
+    }, 2000), k * 250);
   });
 }
 

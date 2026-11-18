@@ -38,6 +38,12 @@ window.ACTIVITIES = [
     see: ["Giant tortoises", "Old prison ruins", "Snorkeling"]
   },
   {
+    id: "nakupenda", name: "Nakupenda Sandbank", subtitle: "A white island in the ocean", photo: "fotos/nakupenda-1.jpg", time: "Half day",
+    photos: ["fotos/nakupenda-1.jpg", "fotos/nakupenda-2.jpg", "fotos/nakupenda-3.jpg", "fotos/nakupenda-4.jpg"],
+    copy: "Sail from Stone Town to a stretch of pure white sand that appears in the middle of the turquoise sea. Swim, snorkel and enjoy fresh fruit and seafood right on the sandbank.",
+    see: ["White sandbank", "Swimming & snorkeling", "Fruit & seafood"]
+  },
+  {
     id: "spice-farm", name: "Spice Farm", subtitle: "Why they call it the Spice Island", photo: "fotos/spice-farm.jpg", time: "Half day",
     copy: "Walk through the plantations and smell, touch and taste the spices that made Zanzibar famous. Finish with fresh tropical fruit.",
     see: ["Cloves & cinnamon", "Vanilla & nutmeg", "Fruit tasting"]
