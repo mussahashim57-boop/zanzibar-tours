@@ -32,7 +32,8 @@ window.GUIDE = {
 
 window.ACTIVITIES = [
   {
-    id: "prison-island", name: "Prison Island", subtitle: "Changuu Island", photo: "fotos/prison-island.jpg", time: "Half day",
+    id: "prison-island", name: "Prison Island", subtitle: "Changuu Island", photo: "fotos/prison-island.jpg",
+    photos: ["fotos/prison-island.jpg", "fotos/prison-building.jpg", "fotos/prison-tortoise-1.jpg", "fotos/prison-tortoise-2.jpg", "fotos/prison-tortoise-3.jpg"], time: "Half day",
     copy: "A short boat ride from Stone Town to a tiny island with crystal water. Meet the giant Aldabra tortoises — some are over 100 years old.",
     see: ["Giant tortoises", "Old prison ruins", "Snorkeling"]
   },
@@ -83,6 +84,7 @@ window.ACTIVITIES = [
   }
 ];
 
+// Para que una excursión pase varias fotos solas, añade photos: ["fotos/a.jpg", "fotos/b.jpg", ...]
 // Créditos de fotos con licencia libre (se muestran al pie de la web)
 // Reseñas. Ahora: resumen de lo que dicen sus clientes, SIN nombres (reviewsShowNames = false).
 // Los nombres solo se activan cuando cada texto sea la reseña real de esa persona.
@@ -104,6 +106,7 @@ window.REVIEWS = [
 ];
 
 window.CREDITS = [
+  { title: "Prison Island building", author: "Diego Delso", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Prisi%C3%B3n,_isla_Changuu,_Tanzania,_2024-05-31,_DD_16.jpg" },
   { title: "Dhow sunset", author: "Rod Waddington", license: "CC BY-SA 2.0", url: "https://www.flickr.com/photos/64607715@N05/10164046475" },
   { title: "Prison Island", author: "Dmitry Sumin", license: "CC BY-ND 2.0", url: "https://www.flickr.com/photos/61051254@N00/5538791353" },
   { title: "Stone Town", author: "neiljs", license: "CC BY 2.0", url: "https://www.flickr.com/photos/59367690@N00/3247603605" },
