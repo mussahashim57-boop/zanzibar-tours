@@ -90,8 +90,8 @@ window.ACTIVITIES = [
     see: ["Beginners welcome", "Shallow lagoon", "Steady wind"]
   },
   {
-    id: "blue-safari", name: "Blue Safari", subtitle: "A full day at sea", photo: "fotos/blue-safari.jpg", time: "Full day",
-    photos: ["fotos/blue-safari.jpg", "fotos/blue-safari-2.jpg", "fotos/blue-safari-3.jpg", "fotos/blue-safari-4.jpg"],
+    id: "blue-safari", name: "Blue Safari", subtitle: "A full day at sea", photo: "fotos/blue-safari-1.jpg", time: "Full day",
+    photos: ["fotos/blue-safari-1.jpg", "fotos/blue-safari-2.jpg", "fotos/blue-safari-3.jpg", "fotos/blue-safari-4.jpg"],
     copy: "Sail through Menai Bay, snorkel among colourful fish, relax on a sandbank and enjoy a seafood lunch on a small island.",
     see: ["Snorkeling", "Sandbank", "Seafood lunch"]
   },
@@ -125,9 +125,6 @@ window.REVIEWS = [
 ];
 
 window.CREDITS = [
-  { title: "Blue Safari dhow", author: "Timothy A. Gonsalves", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Fishing_Boat_Sailing_Fumba_Zanzibar_Oct26_A7CR_14324.jpg" },
-  { title: "Snorkeling", author: "E.3", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:%E1%80%87%E1%80%94%E1%80%BA%E1%80%87%E1%80%AE%E1%80%98%E1%80%AC_snorkeling_01.jpg" },
-  { title: "Baobab, Fumba", author: "Timothy A. Gonsalves", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Baobab_Fumba_Zanzibar_Nov26_OM3_0005c-6c_PanoP.jpg" },
   { title: "Prison Island building", author: "Diego Delso", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Prisi%C3%B3n,_isla_Changuu,_Tanzania,_2024-05-31,_DD_16.jpg" },
   { title: "Dhow sunset", author: "Rod Waddington", license: "CC BY-SA 2.0", url: "https://www.flickr.com/photos/64607715@N05/10164046475" },
   { title: "Prison Island", author: "Dmitry Sumin", license: "CC BY-ND 2.0", url: "https://www.flickr.com/photos/61051254@N00/5538791353" },
@@ -137,5 +134,4 @@ window.CREDITS = [
   { title: "Sailfish", author: "Phuketian.S", license: "CC BY 2.0", url: "https://www.flickr.com/photos/124790945@N06/32820113960" },
   { title: "Dhow at sunset", author: "D-Stanley", license: "CC BY 2.0", url: "https://www.flickr.com/photos/79721788@N00/34712161421" },
   { title: "Kitesurfing", author: "Konstantin Zamkov", license: "CC BY 2.0", url: "https://www.flickr.com/photos/34754535@N03/5365027678" },
-  { title: "Blue Safari", author: "amanderson2", license: "CC BY 2.0", url: "https://www.flickr.com/photos/49399018@N00/4688083148" }
 ];
