@@ -87,6 +87,12 @@ window.ACTIVITIES = [
     id: "blue-safari", name: "Blue Safari", subtitle: "A full day at sea", photo: "fotos/blue-safari.jpg", time: "Full day",
     copy: "Sail through Menai Bay, snorkel among colourful fish, relax on a sandbank and enjoy a seafood lunch on a small island.",
     see: ["Snorkeling", "Sandbank", "Seafood lunch"]
+  },
+  {
+    id: "mikumi", name: "Mikumi Safari", subtitle: "Mainland Tanzania", photo: "fotos/mikumi-1.jpg", time: "1–2 days",
+    photos: ["fotos/mikumi-1.jpg", "fotos/mikumi-2.jpg"],
+    copy: "Take a short flight from Zanzibar to Mikumi National Park for a real African safari. Explore the plains in a 4x4 and look for elephants, lions, giraffes, zebras and buffalo.",
+    see: ["Big game safari", "4x4 game drive", "Elephants & lions"]
   }
 ];
 
