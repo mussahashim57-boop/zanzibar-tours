@@ -63,6 +63,12 @@ window.ACTIVITIES = [
     see: ["Swim with turtles", "Natural lagoon", "Kids friendly"]
   },
   {
+    id: "dolphins", name: "Swim with Dolphins", subtitle: "Kizimkazi", photo: "fotos/dolphins-1.jpg", time: "Half day",
+    photos: ["fotos/dolphins-1.jpg", "fotos/dolphins-2.jpg", "fotos/dolphins-3.jpg", "fotos/dolphins-4.jpg"],
+    copy: "Head out by boat at sunrise to meet the wild dolphins of Kizimkazi. Slip into the crystal-clear water and swim close to them, with respect and at their pace.",
+    see: ["Wild dolphins", "Snorkeling", "Early morning boat trip"]
+  },
+  {
     id: "fishing", name: "Game Fishing", subtitle: "Deep sea trip", photo: "fotos/fishing.jpg", time: "Half or full day",
     copy: "Head out to the deep blue on a fishing boat and try for your trophy: sailfish, tuna, kingfish and more. ",
     see: ["Open ocean", "Big fish", "Trophy photos"]
